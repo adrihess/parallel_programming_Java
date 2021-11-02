@@ -12,10 +12,10 @@ public class MatrixRowSums {
     private static final int[] Sum= new int[COLUMNS];
     private static final AtomicIntegerArray List = new AtomicIntegerArray(ROWS);
     private static int akt;
-    private static final CyclicBarrier barrier = new CyclicBarrier(COLUMNS, MatrixRowSums::wypisz);
+    private static final CyclicBarrier barrier = new CyclicBarrier(COLUMNS, MatrixRowSums::print_out);
 
 
-    private static void wypisz() {
+    private static void print_out() {
         int sum=0;
         for(int i=0; i<COLUMNS; i++)
             sum+= Sum[i];
